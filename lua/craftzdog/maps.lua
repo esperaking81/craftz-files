@@ -23,6 +23,7 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 keymap.set('n', '<C-s>', '<CMD>w<CR>')
+keymap.set('n', '<leader>x', '<CMD>wq<CR>')
 
 -- flutter
 keymap.set('n', '<C-f>', '<CMD>Telescope flutter commands<CR>')

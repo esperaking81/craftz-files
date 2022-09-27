@@ -1,6 +1,9 @@
 vim.g.mapleader = " "
 
 vim.cmd("autocmd!")
+vim.cmd [[
+  let g:astro_typescript = 'enable'
+]]
 
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'

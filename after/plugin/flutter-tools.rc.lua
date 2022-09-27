@@ -6,7 +6,6 @@ end
 local on_attach = function(client, bufnr)
   local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
 
-  local opts = { noremap = true, silent = true }
 
   -- format on save
   if client.server_capabilities.documentFormattingProvider then
@@ -17,10 +16,17 @@ local on_attach = function(client, bufnr)
     })
   end
 
+  local opts = { noremap = true, silent = true }
   -- keymaps
   buf_set_keymap('n', '<leader>fc', '<Cmd>Telescope flutter commands<CR>', opts)
   buf_set_keymap('n', '<leader>fd', '<Cmd>FlutterDevices<CR>', opts)
   buf_set_keymap('n', '<leader>fe', '<Cmd>FlutterEmulators<CR>', opts)
+  buf_set_keymap('n', '<leader>lr', '<Cmd>FlutterReanalyze<CR>', opts)
+  buf_set_keymap('n', '<space>ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+  buf_set_keymap('n', '<space>e', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
+  buf_set_keymap('n', '[d', '<Cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
+  buf_set_keymap('n', ']d', '<Cmd>lua vim.diagnostic.goto_next()<CR>', opts)
+  buf_set_keymap('n', '<space>q', '<Cmd>lua vim.diagnostic.setloclist()<CR>', opts)
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -48,8 +54,9 @@ flutter_tools.setup {
     border =  'rounded',
   },
   dev_log = {
-    enabled = false,
-    open_cmd = "flutterlogs", -- command to use to open the log buffer
+    enabled = true,
+    autostart = false,
+    open_cmd = "tabedit", -- command to use to open the log buffer
   },
 
   dev_tools = {

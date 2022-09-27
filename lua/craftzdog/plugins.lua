@@ -53,4 +53,5 @@ packer.startup(function(use)
   use 'dinhhuy258/git.nvim' -- For git blame & browse
   use 'numToStr/Comment.nvim' -- For line comment
   use 'rcarriga/nvim-notify' -- Beautiful notification manager
+  use 'wuelnerdotexe/vim-astro' -- astro support
 end)

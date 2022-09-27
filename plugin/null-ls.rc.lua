@@ -1,3 +1,4 @@
+---@diagnostic disable: redundant-parameter
 local status, null_ls = pcall(require, "null-ls")
 if (not status) then return end
 
@@ -8,6 +9,7 @@ null_ls.setup {
     null_ls.builtins.diagnostics.eslint_d.with({
       diagnostics_format = '[eslint] #{m}\n(#{c})'
     }),
+    null_ls.builtins.formatting.dart_format,
   },
   on_attach = function(client, bufnr)
     if client.server_capabilities.documentFormattingProvider then

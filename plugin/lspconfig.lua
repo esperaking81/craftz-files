@@ -25,7 +25,7 @@ local on_attach = function(_, bufnr)
   buf_set_keymap('n', '<space>e', '<Cmd>lua vim.diagnostic.open_float()<CR>', opts)
   buf_set_keymap('n', '<space>ca', '<Cmd>lua vim.lsp.buf.code_action()<CR>', opts)
   -- use vim.cmd for setting range actions
-  vim.cmd('xnoremap <leader>ca <Cmd>lua vim.lsp.buf.range_code_action()<CR>')
+  -- vim.cmd('xnoremap <leader>ca <Cmd>lua vim.lsp.buf.range_code_action()<CR>')
   buf_set_keymap('n', '[d', '<Cmd>lua vim.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', ']d', '<Cmd>lua vim.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', '<space>q', '<Cmd>lua vim.diagnostic.setloclist()<CR>', opts)
@@ -63,6 +63,11 @@ protocol.CompletionItemKind = {
 local capabilities = require('cmp_nvim_lsp').update_capabilities(
   vim.lsp.protocol.make_client_capabilities()
 )
+
+nvim_lsp.astro.setup {
+  on_attach = on_attach,
+  capabilities = capabilities
+}
 
 nvim_lsp.flow.setup {
   on_attach = on_attach,
