@@ -1,7 +1,7 @@
-local status, zenMode = pcall(require, "zen-mode")
+local status, zenMode = pcall(require, "true-zen")
 if (not status) then return end
 
 zenMode.setup {
 }
 
-vim.keymap.set('n', '<C-w>o', '<cmd>ZenMode<cr>', { silent = true })
+vim.keymap.set('n', '<leader>za', '<cmd>TZAtaraxis<cr>', { silent = true })

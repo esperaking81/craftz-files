@@ -5,7 +5,10 @@ vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
 vim.wo.number = true
+vim.opt.relativenumber = true
 
+vim.opt.splitbelow = true -- force all vertical splits to go below the curent window
+vim.opt.splitright = true -- force all horizontal splits to go the right of the curent window
 vim.opt.title = true
 vim.opt.autoindent = true
 vim.opt.smartindent = true
