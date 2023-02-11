@@ -15,6 +15,14 @@ keymap.set('n', '<C-a>', 'gg<S-v>G')
 -- Save with root permission (not working for now)
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
+-- quickly insert mode
+keymap.set('i', 'jk', '<ESC>')
+keymap.set('i', 'jj', '<ESC>')
+
+
+--Flutter tools
+keymap.set('n', '<C-f>', ':Telescope flutter commands <cr>')
+
 -- New tab
 keymap.set('n', 'te', ':tabedit')
 -- Split window
