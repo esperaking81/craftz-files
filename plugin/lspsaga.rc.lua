@@ -13,8 +13,8 @@ saga.setup({
 
 -- local diagnostic = require("lspsaga.diagnostic")
 local opts = { noremap = true, silent = true }
-vim.keymap.set('n', 'dn', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
-vim.keymap.set('n', 'dp', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
+vim.keymap.set('n', 'ne', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
+vim.keymap.set('n', 'np', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
 vim.keymap.set('n', 'gl', '<Cmd>Lspsaga show_line_diagnostics<CR>', opts)
 vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
 vim.keymap.set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)

@@ -219,10 +219,10 @@ _G.packer_plugins = {
     path = "/home/devaslife/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["zen-mode.nvim"] = {
+  ["true-zen.nvim"] = {
     loaded = true,
-    path = "/home/devaslife/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
-    url = "https://github.com/folke/zen-mode.nvim"
+    path = "/home/devaslife/.local/share/nvim/site/pack/packer/start/true-zen.nvim",
+    url = "https://github.com/Pocco81/true-zen.nvim"
   }
 }
 

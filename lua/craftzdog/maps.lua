@@ -13,12 +13,13 @@ keymap.set('n', 'dw', 'vb"_d')
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
 -- Save with root permission (not working for now)
+keymap.set('n', '<C-s>', ':w!<cr>')
+keymap.set('i', '<C-s>', ':w!<cr>')
 --vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
 
 -- quickly insert mode
 keymap.set('i', 'jk', '<ESC>')
 keymap.set('i', 'jj', '<ESC>')
-
 
 --Flutter tools
 keymap.set('n', '<C-f>', ':Telescope flutter commands <cr>')

@@ -23,6 +23,7 @@ packer.startup(function(use)
   use 'williamboman/mason.nvim'
   use 'williamboman/mason-lspconfig.nvim'
   use 'akinsho/flutter-tools.nvim'
+  use 'tpope/vim-surround'
 
   use 'glepnir/lspsaga.nvim' -- LSP UIs
   use 'L3MON4D3/LuaSnip'
