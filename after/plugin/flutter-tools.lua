@@ -14,6 +14,6 @@ flutter.setup {
     capabilities = require('craftzdog.handlers').capabilities,
     dev_log = {
         enabled = true,
-        open_cmd = "10split", -- command to use to open the log buffer
+        open_cmd = "tabedit", -- command to use to open the log buffer
     },
 }
