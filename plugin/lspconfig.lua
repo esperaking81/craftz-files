@@ -4,8 +4,6 @@ if (not status) then return end
 
 local protocol = require('vim.lsp.protocol')
 
-
-
 protocol.CompletionItemKind = {
   '', -- Text
   '', -- Method
@@ -55,7 +53,7 @@ nvim_lsp.sourcekit.setup {
   capabilities = capabilities,
 }
 
-nvim_lsp.lua_ls.setup {
+nvim_lsp.sumneko_lua.setup {
   capabilities = capabilities,
   on_attach = function(client, bufnr)
     on_attach(client, bufnr)
